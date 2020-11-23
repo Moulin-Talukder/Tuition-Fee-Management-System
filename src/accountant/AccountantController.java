@@ -143,7 +143,7 @@ public class AccountantController implements Initializable {
                 calc += 5100;
                 break;
             case "March":
-                calc += 10200;
+                calc += 10250;
                 break;
             case "April":
                 calc += 15300;
