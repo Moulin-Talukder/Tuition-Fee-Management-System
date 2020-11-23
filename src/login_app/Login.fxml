@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="840.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login_app.LoginController">
+   <children>
+      <AnchorPane layoutX="502.0" prefHeight="400.0" prefWidth="350.0" style="-fx-background-color: #9C2827;">
+         <children>
+            <TextField fx:id="username" layoutX="65.0" layoutY="132.0" prefHeight="25.0" prefWidth="208.0" />
+            <PasswordField fx:id="password" layoutX="65.0" layoutY="200.0" prefHeight="25.0" prefWidth="208.0" />
+            <Label layoutX="63.0" layoutY="109.0" text="Email" textFill="WHITE" />
+            <Label layoutX="65.0" layoutY="177.0" text="Password" textFill="WHITE" />
+            <Button fx:id="loginButton" layoutX="121.0" layoutY="249.0" mnemonicParsing="false" onAction="#Login" prefHeight="25.0" prefWidth="81.0" text="Login" textFill="#141414" />
+            <Label fx:id="loginstatus" layoutX="67.0" layoutY="320.0" prefHeight="50.0" prefWidth="242.0" />
+            <Label layoutX="121.0" layoutY="47.0" prefHeight="33.0" prefWidth="81.0" text="Sign In" textFill="#fffefe">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Button layoutX="121.0" layoutY="286.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="25.0" prefWidth="81.0" text="Reset" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="400.0" fitWidth="513.0" layoutX="-1.0" opacity="0.38" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/tech.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="13.0" layoutY="15.0" prefHeight="17.0" prefWidth="56.0" text="DB status" textFill="WHITE" />
+      <Label fx:id="dbstatus" layoutX="76.0" layoutY="15.0" prefHeight="17.0" prefWidth="155.0" textFill="GREEN" />
+      <Label layoutX="41.0" layoutY="75.0" prefHeight="39.0" prefWidth="430.0" text="Tuition Fee Automation For School" textFill="#f8f7f7">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="162.0" prefHeight="38.0" prefWidth="165.0" text=" Select Authority :" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="combobox" layoutX="41.0" layoutY="221.0" prefHeight="38.0" prefWidth="233.0" promptText="Accountant/Student" />
+   </children>
+</AnchorPane>

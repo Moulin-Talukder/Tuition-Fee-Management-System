@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1240.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="students.StudentsController">
+   <children>
+      <TabPane prefHeight="680.0" prefWidth="1240.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Student ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <Label layoutX="506.0" layoutY="47.0" prefHeight="39.0" prefWidth="265.0" text="Student Dashboard" textFill="#fcf9f9">
+                           <font>
+                              <Font name="System Bold" size="27.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="logoutButton1" layoutX="1031.0" layoutY="9.0" mnemonicParsing="false" onAction="#Logut" prefHeight="30.0" prefWidth="195.0" text="Log Out" AnchorPane.rightAnchor="14.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Student Table">
+            <content>
+                  <AnchorPane style="-fx-background-color: black;">
+                     <children>
+                        <HBox layoutY="223.0" prefHeight="457.0" prefWidth="1240.0">
+                           <children>
+                              <TableView fx:id="studenttable" prefHeight="449.0" prefWidth="1240.0">
+                                <columns>
+                                  <TableColumn fx:id="idcolumn" minWidth="9.0" prefWidth="109.0" text="ID" />
+                                  <TableColumn fx:id="firstnamecolumn" minWidth="0.0" prefWidth="157.99996948242188" text="First Name" />
+                                    <TableColumn fx:id="lastnamecolumn" minWidth="0.0" prefWidth="158.0" text="Last Name" />
+                                    <TableColumn fx:id="emailcolumn" prefWidth="161.0" text="Email" />
+                                    <TableColumn fx:id="dobcolumn" prefWidth="163.0" text="DOB" />
+                                    <TableColumn fx:id="feecolumn" prefWidth="163.0" text="Fee" />
+                                    <TableColumn fx:id="monthcolumn" prefWidth="163.0" text="Month" />
+                                    <TableColumn fx:id="duecolumn" prefWidth="163.0" text="Due" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </HBox>
+                        <Button layoutX="14.0" layoutY="9.0" mnemonicParsing="false" onAction="#loadStudentData" prefHeight="30.0" prefWidth="195.0" text="Load Data" AnchorPane.leftAnchor="14.0" />
+                        <Button fx:id="logoutButton" layoutX="1167.0" layoutY="9.0" mnemonicParsing="false" onAction="#Logut" prefHeight="30.0" prefWidth="195.0" text="Log Out" AnchorPane.rightAnchor="14.0" />
+                        <Label layoutX="506.0" layoutY="46.0" prefHeight="39.0" prefWidth="265.0" text="Student Dashboard" textFill="#fcf9f9">
+                           <font>
+                              <Font name="System Bold" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="506.0" layoutY="146.0" prefHeight="25.0" prefWidth="229.0" text="Student Table" textFill="WHITE">
+                           <padding>
+                              <Insets left="65.0" />
+                           </padding>
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
